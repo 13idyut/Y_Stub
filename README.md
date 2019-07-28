@@ -25,6 +25,8 @@ _Joseph Redmon, Ali Farhadi_
 
 Y_Stub is based on YOLOv3 implemented in TensorFlow. Here
 `iou threshold` is set to `0.5` and `confidence threshold` is set to `0.7`. User can tweak vales as per their need.
+
+
 [[paper]](https://pjreddie.com/media/files/papers/YOLOv3.pdf)[[website]](https://pjreddie.com/darknet/yolo/)[[YOLO]](https://github.com/pjreddie/darknet)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
