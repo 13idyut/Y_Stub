@@ -16,7 +16,7 @@ Uses pretrained weights to generate stubs from the image. Stubs are stored in `t
 
     $ cd Y_Stub
     $ python app.py path/to/image/<image-name.jpg/png>
-<p align="center"><img src="images/supercar-bloidie-output.jpg" width="480"\></p>
+<p align="center"><img src="images/car-and-dog.jpg" width="480"\></p>
 <p align="center"><img src="images/answer.jpg" width="480"\></p>
 
 ## Credit
