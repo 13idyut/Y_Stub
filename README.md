@@ -1,5 +1,5 @@
 # Y_Stub
-This directory is a very basic individual approach to the state of the art object detection algorithm [YOLO](https://pjreddie.com/darknet/yolo/) based image tagger. For more information please refer to  `readme_first.pdf`. For more information about YOLO please  refer [Here](https://github.com/pjreddie/darknet).
+This directory is a very basic individual approach to the state of the art object detection algorithm [YOLO](https://pjreddie.com/darknet/yolo/) based image tagger. For more information about YOLO please refer [Here](https://github.com/pjreddie/darknet).
 ## Installation
 ##### Clone and install requirements
 
