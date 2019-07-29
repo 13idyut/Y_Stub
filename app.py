@@ -1,6 +1,4 @@
 import tensorflow as tf
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont
 import glob
 from model.yolo import Yolo_v3
 import argparse
@@ -19,28 +17,23 @@ def paragraph_generator(contents):
 
         else:
 
-            answer.write(' '.join([str(item) for item in and_tag]) +
-                         ' ' + is_tag + ' there in the given image.')
+            answer.write(' '.join([str(item) for item in and_tag]) + ' ' +
+                         is_tag + ' there in the given image.')
 
 
 _MODEL_SIZE = (416, 416)
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    'images',
-    nargs='*',
-    help='Must take in an image',
-    type=str)
+    'images', nargs='*', help='Must take in an image', type=str)
 
 args = parser.parse_args()
 image = vars(args)
 
 image_list = image['images']
 
-
 img = image_list[0]
 
 img_names = glob.glob(img)
-
 
 batch_size = len(img_names)
 batch = load_images(img_names, model_size=_MODEL_SIZE)
@@ -71,7 +64,6 @@ with tf.Session() as sess:
 draw_boxes(img_names, detection_result, class_names, _MODEL_SIZE)
 tf.reset_default_graph()
 
-
 file = open('tag.txt', 'r')
 
 contents = file.read()
@@ -84,14 +76,11 @@ sorted_words = sorted(words)
 
 word_dictionary = word_dictionary(sorted_words)
 
-pre_final_dictionary = pre_final_dictionary(word_dictionary)
-
-final_dictionary = final_dictionary(pre_final_dictionary)
+final_dictionary = final_dictionary(pre_final_dictionary(word_dictionary))
 
 is_tag = is_are(final_dictionary)
 
 and_tag = comma_and_placement(final_dictionary)
-
 
 paragraph_generator(contents)
 
